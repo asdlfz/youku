@@ -3,9 +3,9 @@
 // @author Harv
 // @description 视频去黑屏
 // @version 0.2.5
-// @namespace https://github.com/asdlfz/youku
-// @updateURL https://github.com/asdlfz/youku/raw/master/YoukuAntiADs.mian.js
-// @downloadURL https://github.com/asdlfz/youku/raw/master/YoukuAntiADs.user.js
+// @namespace https://raw.githubusercontent.com/asdlfz/youku
+// @updateURL https://raw.githubusercontent.com/asdlfz/youku/master/YoukuAntiADs.mian.js
+// @downloadURL https://raw.githubusercontent.com/asdlfz/youku/master/YoukuAntiADs.user.js
 // @include http://*/*
 // @include https://*/*
 // @grant GM_xmlhttpRequest
@@ -26,17 +26,17 @@
         get players() {
             if(!this._players) {
                 this._players = {
-                    'youku_loader': 'https://github.com/asdlfz/youku/raw/master/player/testmod/loader.swf',
-                    'youku_player': 'https://github.com/asdlfz/youku/raw/master/player/testmod/player.swf',
-                    'ku6': 'https://github.com/asdlfz/youku/raw/master/player/ku6.swf',
-                    'ku6_out': 'https://github.com/asdlfz/youku/raw/master/player/ku6_out.swf',
-                    'iqiyi': 'https://github.com/asdlfz/youku/raw/master/player/testmod/iqiyi.swf',
-                    'iqiyi5': 'https://github.com/asdlfz/youku/raw/master/player/testmod/iqiyi5.swf',
-                    'iqiyi_out': 'https://github.com/asdlfz/youku/raw/master/player/testmod/iqiyi_out.swf',
-                    'tudou': 'https://github.com/asdlfz/youku/raw/master/player/testmod/tudou.swf',
-                    'tudou_olc': 'https://github.com/asdlfz/youku/raw/master/player/testmod/olc_8.swf',
-                    'tudou_sp': 'https://github.com/asdlfz/youku/raw/master/player/testmod/sp.swf',
-                    'letv': 'https://github.com/asdlfz/youku/raw/master/player/testmod/letv.swf'
+                    'youku_loader': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/loader.swf',
+                    'youku_player': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/player.swf',
+                    'ku6': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/ku6.swf',
+                    'ku6_out': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/ku6_out.swf',
+                    'iqiyi': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/iqiyi.swf',
+                    'iqiyi5': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/iqiyi5.swf',
+                    'iqiyi_out': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/iqiyi_out.swf',
+                    'tudou': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/tudou.swf',
+                    'tudou_olc': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/olc_8.swf',
+                    'tudou_sp': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/sp.swf',
+                    'letv': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/letv.swf'
                 };
             }
             return this._players;
