@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name YoukuAntiADs
 // @author Harv
-// @description  ”∆µ»•∫⁄∆¡
+// @description ËßÜÈ¢ëÂéªÈªëÂ±è
 // @version 0.2.5
-// @namespace http://userscripts.org/users/Harv
-// @updateURL https://userscripts.org/scripts/source/119622.meta.js
-// @downloadURL https://userscripts.org/scripts/source/119622.user.js
+// @namespace https://github.com/asdlfz/youku
+// @updateURL https://github.com/asdlfz/youku/raw/master/YoukuAntiADs.mian.js
+// @downloadURL https://github.com/asdlfz/youku/raw/master/YoukuAntiADs.user.js
 // @include http://*/*
 // @include https://*/*
 // @grant GM_xmlhttpRequest
@@ -117,7 +117,7 @@
                 var isFx = /firefox/i.test(navigator.userAgent);
                 GM_xmlhttpRequest({
                     method: isFx ? 'HEAD' : 'GET',
-                    url: isFx ? player : 'https://query.yahooapis.com/v1/public/yql?format=json&q=' + encodeURIComponent('use"https://haoutil.googlecode.com/svn/trunk/firefox/tudou_redirect.yql.xml" as tudou; select * from tudou where url="' + player + '" and referer="' + window.location.href + '"'),
+                    url: isFx ? player : 'https://query.yahooapis.com/v1/public/yql?format=json&q=' + encodeURIComponent('use"https://github.com/asdlfz/youku/raw/master/firefox/tudou_redirect.yql.xml" as tudou; select * from tudou where url="' + player + '" and referer="' + window.location.href + '"'),
                     onload: function(response) {
                         var finalUrl = (isFx ? response.finalUrl : response.responseText);
                         var match = finalUrl.match(/(iid|youkuid|resourceid|autoplay|snap_pic)=[^&]+/ig);
