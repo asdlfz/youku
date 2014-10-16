@@ -4,8 +4,8 @@
 // @description 视频去黑屏
 // @version 0.2.5
 // @namespace https://raw.githubusercontent.com/asdlfz/youku
-// @updateURL https://raw.githubusercontent.com/asdlfz/youku/master/YoukuAntiADs.mian.js
-// @downloadURL https://raw.githubusercontent.com/asdlfz/youku/master/YoukuAntiADs.user.js
+// @updateURL http://asdlfz.github.io/youku/YoukuAntiADs.mian.js
+// @downloadURL http://asdlfz.github.io/youku/YoukuAntiADs.user.js
 // @include http://*/*
 // @include https://*/*
 // @grant GM_xmlhttpRequest
@@ -26,17 +26,17 @@
         get players() {
             if(!this._players) {
                 this._players = {
-                    'youku_loader': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/loader.swf',
-                    'youku_player': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/player.swf',
-                    'ku6': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/ku6.swf',
-                    'ku6_out': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/ku6_out.swf',
-                    'iqiyi': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/iqiyi.swf',
-                    'iqiyi5': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/iqiyi5.swf',
-                    'iqiyi_out': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/iqiyi_out.swf',
-                    'tudou': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/tudou.swf',
-                    'tudou_olc': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/olc_8.swf',
-                    'tudou_sp': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/sp.swf',
-                    'letv': 'https://raw.githubusercontent.com/asdlfz/youku/master/player/testmod/letv.swf'
+                    'youku_loader': 'http://asdlfz.github.io/youku/player/testmod/loader.swf',
+                    'youku_player': 'http://asdlfz.github.io/youku/player/testmod/player.swf',
+                    'ku6': 'http://asdlfz.github.io/youku/player/ku6.swf',
+                    'ku6_out': 'http://asdlfz.github.io/youku/player/ku6_out.swf',
+                    'iqiyi': 'http://asdlfz.github.io/youku/player/testmod/iqiyi.swf',
+                    'iqiyi5': 'http://asdlfz.github.io/youku/player/testmod/iqiyi5.swf',
+                    'iqiyi_out': 'http://asdlfz.github.io/youku/player/testmod/iqiyi_out.swf',
+                    'tudou': 'http://asdlfz.github.io/youku/player/testmod/tudou.swf',
+                    'tudou_olc': 'http://asdlfz.github.io/youku/player/testmod/olc_8.swf',
+                    'tudou_sp': 'http://asdlfz.github.io/youku/player/testmod/sp.swf',
+                    'letv': 'http://asdlfz.github.io/youku/player/testmod/letv.swf'
                 };
             }
             return this._players;
@@ -117,7 +117,7 @@
                 var isFx = /firefox/i.test(navigator.userAgent);
                 GM_xmlhttpRequest({
                     method: isFx ? 'HEAD' : 'GET',
-                    url: isFx ? player : 'https://query.yahooapis.com/v1/public/yql?format=json&q=' + encodeURIComponent('use"https://github.com/asdlfz/youku/raw/master/firefox/tudou_redirect.yql.xml" as tudou; select * from tudou where url="' + player + '" and referer="' + window.location.href + '"'),
+                    url: isFx ? player : 'https://query.yahooapis.com/v1/public/yql?format=json&q=' + encodeURIComponent('use"http://asdlfz.github.io/youku/firefox/tudou_redirect.yql.xml" as tudou; select * from tudou where url="' + player + '" and referer="' + window.location.href + '"'),
                     onload: function(response) {
                         var finalUrl = (isFx ? response.finalUrl : response.responseText);
                         var match = finalUrl.match(/(iid|youkuid|resourceid|autoplay|snap_pic)=[^&]+/ig);
